@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Joyeux Anniversaire Ma Chère Ruth ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============ RESET ET BASE ============ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, 
+        #ffb6c1 0%, 
+        #ffd1dc 25%, 
+        #e6e6fa 50%, 
+        #d8bfd8 75%, 
+        #c9a0dc 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      color: #2c2c2c;
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* ============ EFFET DE VELOURS ============ */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(216, 191, 216, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 209, 220, 0.1) 0%, transparent 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ============ CONTENEUR PRINCIPAL ============ */
+    .container {
+      position: relative;
+      z-index: 10;
+      width: 94%;
+      max-width: 1000px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 40px;
+      padding: 60px 50px;
+      text-align: center;
+      backdrop-filter: blur(15px);
+      box-shadow: 
+        0 50px 100px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+      animation: apparitionDouce 2s ease-out;
+      margin: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      overflow: hidden;
+    }
+
+    /* Effet de bordure lumineuse */
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      border-radius: 44px;
+      background: linear-gradient(45deg, 
+        #ffb6c1, #ffd1dc, #e6e6fa, #d8bfd8, #c9a0dc, #ffb6c1);
+      background-size: 400% 400%;
+      filter: blur(12px);
+      z-index: -1;
+      animation: arcEnCiel 12s ease infinite;
+      opacity: 0.6;
+    }
+
+    /* ============ EN-TÊTE ============ */
+    .header {
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      width: 50%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #ff69b4, transparent);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      font-weight: 900;
+      color: #d63384;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: inline-block;
+    }
+
+    h1 .heart {
+      display: inline-block;
+      animation: battement 1.5s infinite;
+      filter: drop-shadow(0 0 8px rgba(214, 51, 132, 0.3));
+    }
+
+    .subtitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem;
+      color: #ff69b4;
+      margin-top: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+      background: linear-gradient(45deg, #ff69b4, #ff1493);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .date {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 50px;
+      font-size: 1.2rem;
+      color: #666;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 105, 180, 0.2);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    /* ============ MESSAGE ROMANTIQUE ============ */
+    .message-container {
+      position: relative;
+      margin: 50px 0;
+      padding: 45px 40px;
+      background: rgba(255, 248, 248, 0.9);
+      border-radius: 28px;
+      text-align: left;
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 182, 193, 0.2);
+      overflow: hidden;
+      border-left: 8px solid #ff69b4;
+    }
+
+    .message-container::before {
+      content: '❝';
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 8rem;
+      color: rgba(255, 105, 180, 0.08);
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      z-index: 0;
+    }
+
+    .message {
+      font-size: 1.35rem;
+      line-height: 1.9;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .message:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight {
+      color: #d63384;
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      padding: 0 4px;
+      transition: all 0.3s ease;
+    }
+
+    .highlight::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: rgba(255, 105, 180, 0.2);
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.4s ease;
+      border-radius: 2px;
+    }
+
+    .highlight:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* ============ BOUTON MAGIQUE ============ */
+    .button-container {
+      margin: 45px 0 35px;
+      position: relative;
+    }
+
+    .love-button {
+      position: relative;
+      padding: 22px 55px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 70px;
+      cursor: pointer;
+      background: linear-gradient(135deg, #ff69b4, #ff1493, #ff69b4);
+      background-size: 200% 200%;
+      color: white;
+      box-shadow: 
+        0 20px 40px rgba(255, 105, 180, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+      transition: all 0.5s ease;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      animation: gradientShift 3s ease infinite;
+    }
+
+    .love-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.7s ease;
+    }
+
+    .love-button:hover {
+      transform: translateY(-7px) scale(1.08);
+      box-shadow: 
+        0 30px 60px rgba(255, 105, 180, 0.6),
+        0 0 30px rgba(255, 20, 147, 0.4);
+    }
+
+    .love-button:hover::before {
+      left: 100%;
+    }
+
+    .love-button:active {
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    .love-button i {
+      font-size: 1.4rem;
+      animation: scintillement 2s infinite;
+    }
+
+    /* ============ SIGNATURE ============ */
+    .signature-container {
+      margin-top: 50px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255, 105, 180, 0.2);
+      position: relative;
+      min-height: 120px;
+    }
+
+    .signature {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: transparent;
+      background: linear-gradient(45deg, #ff69b4, #ff1493, #ff69b4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      transition: all 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      filter: drop-shadow(0 5px 15px rgba(214, 51, 132, 0.2));
+    }
+
+    .signature.revealed {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* ============ ÉTOILES VOLANTES ============ */
+    .stars-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .star {
+      position: absolute;
+      color: #fff;
+      font-size: 20px;
+      opacity: 0;
+      animation: volEtoile linear forwards;
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    }
+
+    /* ============ CŒURS VOLANTS ============ */
+    .hearts-container {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    .heart-float {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0;
+      animation: volCoeur linear forwards;
+    }
+
+    /* ============ ANIMATIONS ============ */
+    @keyframes apparitionDouce {
+      0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes battement {
+      0%, 100% { transform: scale(1); }
+      10% { transform: scale(1.3); }
+      20% { transform: scale(1); }
+      30% { transform: scale(1.2); }
+      40% { transform: scale(1); }
+    }
+
+    @keyframes arcEnCiel {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes scintillement {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    @keyframes volCoeur {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes volEtoile {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-200px) translateX(100px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes particuleFlottante {
+      from { transform: translateY(100vh); }
+      to { transform: translateY(-200px); }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 992px) {
+      .container {
+        padding: 45px 35px;
+        margin: 20px;
+      }
+      
+      h1 {
+        font-size: 3.8rem;
+      }
+      
+      .subtitle {
+        font-size: 2.3rem;
+      }
+      
+      .message {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 35px 25px;
+        border-radius: 30px;
+      }
+      
+      h1 {
+        font-size: 3rem;
+      }
+      
+      .subtitle {
+        font-size: 1.9rem;
+      }
+      
+      .message-container {
+        padding: 35px 25px;
+      }
+      
+      .message {
+        font-size: 1.15rem;
+      }
+      
+      .love-button {
+        padding: 18px 40px;
+        font-size: 1.15rem;
+      }
+      
+      .signature {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .subtitle {
+        font-size: 1.7rem;
+      }
+      
+      .message-container {
+        padding: 25px 20px;
+      }
+      
+      .date {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+      
+      .love-button {
+        padding: 16px 30px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Éléments flottants -->
+  <div class="stars-container" id="stars"></div>
+  <div class="hearts-container" id="hearts"></div>
+
+  <!-- Contenu principal -->
+  <div class="container">
+    <div class="header">
+      <h1>Joyeux Anniversaire <span class="heart">❤️</span> Ruth</h1>
+      <div class="subtitle">À la femme qui fait battre mon cœur chaque jour</div>
+      <div class="date" id="dateDisplay"></div>
+    </div>
+
+    <div class="message-container">
+      <p class="message">
+        Ma chère Ruth, aujourd'hui n'est pas seulement l'anniversaire de ta naissance, 
+        mais la célébration de la plus belle rencontre de ma vie. Depuis que tu es entrée 
+        dans mon monde, chaque jour est devenu une aventure merveilleuse, chaque sourire 
+        de toi est un soleil qui réchauffe mon âme.
+      </p>
+      
+      <p class="message">
+        Ta présence est comme une mélodie douce qui apaise mes pensées les plus tumultueuses. 
+        Quand je te regarde, je vois non seulement la femme <span class="highlight">incroyable</span> 
+        que tu es, mais aussi tous les rêves que nous construirons ensemble. Ton rire est 
+        ma symphonie préférée, ton regard mon refuge le plus sûr.
+      </p>
+      
+      <p class="message">
+        Je me souviens de ces petits moments qui font tout : tes mains dans les miennes, 
+        la manière dont tu fronces le nez quand tu concentres, cette étincelle dans tes yeux 
+        quand tu es heureuse. Ce sont ces <span class="highlight">détails infimes</span> qui 
+        tissent la tapisserie de mon bonheur.
+      </p>
+      
+      <p class="message">
+        Aujourd'hui, je te souhaite une année où chaque jour t'apportera plus de joie que le précédent, 
+        où tes rêves les plus fous deviendront réalité, et où tu sentiras à quel point tu es 
+        <span class="highlight">aimée</span>, <span class="highlight">chérie</span> et 
+        <span class="highlight">admirable</span>.
+      </p>
+      
+      <p class="message">
+        Tu es la muse de mes plus beaux jours, la gardienne de mes secrets les plus doux, 
+        la raison pour laquelle mon cœur bat avec tant de ferveur. Je t'aime non seulement 
+        pour ce que tu es, mais pour ce que je deviens lorsque je suis avec toi.
+      </p>
+    </div>
+
+    <div class="button-container">
+      <button class="love-button" onclick="revealMagic()">
+        <i class="fas fa-magic"></i> Découvre la magie de mon cœur <i class="fas fa-heart"></i>
+      </button>
+    </div>
+
+    <div class="signature-container">
+      <div class="signature" id="signature"></div>
+    </div>
+  </div>
+
+  <script>
+    // Initialisation
+    document.addEventListener('DOMContentLoaded', function() {
+      // Date du jour
+      const today = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      document.getElementById('dateDisplay').textContent = 
+        `Le ${today.toLocaleDateString('fr-FR', options)}`;
+      
+      // Créer des cœurs flottants
+      createFloatingHearts();
+      
+      // Créer des étoiles scintillantes
+      createStars();
+      
+      // Musique d'ambiance douce
+      playAmbientMusic();
+    });
+
+    // Créer des cœurs flottants
+    function createFloatingHearts() {
+      const heartsContainer = document.getElementById('hearts');
+      const heartCount = window.innerWidth < 768 ? 8 : 15;
+      
+      for (let i = 0; i < heartCount; i++) {
+        setTimeout(() => {
+          createHeart(heartsContainer);
+        }, i * 800);
+      }
+      
+      // Continuer à générer des cœurs
+      setInterval(() => {
+        createHeart(heartsContainer);
+      }, 3000);
+    }
+
+    function createHeart(container) {
+      const heart = document.createElement('div');
+      heart.className = 'heart-float';
+      
+      // Choix aléatoire de symboles
+      const symbols = ['❤️', '💖', '💕', '💗', '💓', '💘', '💝'];
+      heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      
+      // Position aléatoire
+      heart.style.left = `${Math.random() * 100}vw`;
+      
+      // Taille aléatoire
+      const size = 20 + Math.random() * 25;
+      heart.style.fontSize = `${size}px`;
+      
+      // Couleur aléatoire
+      const colors = ['#ff69b4', '#ff1493', '#ff6b9d', '#ff8fab', '#ff477e'];
+      heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+      
+      // Durée d'animation aléatoire
+      const duration = 10 + Math.random() * 10;
+      heart.style.animationDuration = `${duration}s`;
+      
+      container.appendChild(heart);
+      
+      // Supprimer après l'animation
+      setTimeout(() => {
+        if (heart.parentNode) {
+          heart.remove();
+        }
+      }, duration * 1000);
+    }
+
+    // Créer des étoiles scintillantes
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      const starCount = window.innerWidth < 768 ? 20 : 40;
+      
+      for (let i = 0; i < starCount; i++) {
+        setTimeout(() => {
+          createStar(starsContainer);
+        }, i * 300);
+      }
+      
+      setInterval(() => {
+        createStar(starsContainer);
+      }, 2000);
+    }
+
+    function createStar(container) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      
+      // Choix aléatoire d'étoiles
+      const stars = ['★', '☆', '✶', '✷', '✦', '✧'];
+      star.innerHTML = stars[Math.floor(Math.random() * stars.length)];
+      
+      // Position aléatoire
+      star.style.left = `${Math.random() * 100}vw`;
+      
+      // Taille aléatoire
+      const size = 15 + Math.random() * 20;
+      star.style.fontSize = `${size}px`;
+      
+      // Durée d'animation aléatoire
+      const duration = 12 + Math.random() * 15;
+      star.style.animationDuration = `${duration}s`;
+      
+      container.appendChild(star);
+      
+      // Supprimer après l'animation
+      setTimeout(() => {
+        if (star.parentNode) {
+          star.remove();
+        }
+      }, duration * 1000);
+    }
+
+    // Fonction principale de révélation
+    function revealMagic() {
+      const signature = document.getElementById('signature');
+      signature.innerHTML = `Pour l'éternité et au-delà, <br> Ton Roy ❤️`;
+      signature.classList.add('revealed');
+      
+      // Effet de confettis de cœurs
+      launchHeartConfetti();
+      
+      // Mélodie magique
+      playMagicMelody();
+      
+      // Animation du bouton
+      const button = document.querySelector('.love-button');
+      button.innerHTML = `<i class="fas fa-crown"></i> Tu es ma reine pour toujours <i class="fas fa-crown"></i>`;
+      button.style.background = 'linear-gradient(135deg, #ff1493, #ff69b4, #ff1493)';
+      
+      // Ajouter plus d'effets
+      for(let i = 0; i < 25; i++) {
+        setTimeout(() => {
+          createHeart(document.getElementById('hearts'));
+          if (i % 5 === 0) createStar(document.getElementById('stars'));
+        }, i * 100);
+      }
+      
+      // Message surprise dans la console
+      console.log("%c💝 Pour Ruth, la femme la plus extraordinaire 💝", 
+        "color: #ff69b4; font-size: 18px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);");
+      console.log("%cChaque jour avec toi est un cadeau précieux. Je t'aime infiniment.", 
+        "color: #d63384; font-size: 14px; font-style: italic;");
+    }
+
+    // Lancer des confettis de cœurs
+    function launchHeartConfetti() {
+      const confettiCount = window.innerWidth < 768 ? 60 : 120;
+      
+      for (let i = 0; i < confettiCount; i++) {
+        setTimeout(() => {
+          const confetti = document.createElement('div');
+          confetti.style.position = 'fixed';
+          confetti.style.zIndex = '9999';
+          confetti.style.pointerEvents = 'none';
+          
+          // Symboles de cœurs
+          const hearts = ['❤️', '💖', '💕', '💗', '💓', '💘'];
+          confetti.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+          
+          // Taille aléatoire
+          const size = 20 + Math.random() * 25;
+          confetti.style.fontSize = `${size}px`;
+          
+          // Position de départ
+          confetti.style.left = `${Math.random() * 100}vw`;
+          confetti.style.top = '-50px';
+          
+          // Couleur aléatoire
+          const colors = ['#ff69b4', '#ff1493', '#ff6b9d', '#ff8fab', '#ff477e'];
+          confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+          
+          document.body.appendChild(confetti);
+          
+          // Animation
+          const animation = confetti.animate([
+            { 
+              transform: `translateY(0) rotate(0deg) scale(1)`, 
+              opacity: 1 
+            },
+            { 
+              transform: `translateY(${window.innerHeight + 100}px) 
+                         rotate(${Math.random() * 720}deg) 
+                         scale(${0.5 + Math.random() * 0.5})`, 
+              opacity: 0 
+            }
+          ], {
+            duration: 2500 + Math.random() * 2000,
+            easing: 'cubic-bezier(0.1, 0.8, 0.3, 1)'
+          });
+          
+          // Nettoyer après animation
+          animation.onfinish = () => {
+            confetti.remove();
+          };
+        }, i * 30);
+      }
+    }
+
+    // Jouer une mélodie magique
+    function playMagicMelody() {
+      try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // Notes pour une mélodie romantique
+        const romanticMelody = [
+          523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50
+        ];
+        
+        let currentTime = audioContext.currentTime;
+        
+        romanticMelody.forEach((frequency, index) => {
+          // Créer oscillateur et gain
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          
+          // Type d'onde douce
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(frequency, currentTime);
+          
+          // Enveloppe douce
+          gainNode.gain.setValueAtTime(0, currentTime);
+          gainNode.gain.linearRampToValueAtTime(0.25, currentTime + 0.1);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, currentTime + 1.2);
+          
+          // Démarrer et arrêter
+          oscillator.start(currentTime);
+          oscillator.stop(currentTime + 1.2);
+          
+          currentTime += 0.15;
+        });
+      } catch (e) {
+        console.log("L'audio n'est pas disponible");
+      }
+    }
+
+    // Musique d'ambiance très discrète
+    function playAmbientMusic() {
+      try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // Créer un bourdonnement très doux en arrière-plan
+        const playAmbientNote = () => {
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          
+          // Fréquence très basse et douce
+          oscillator.frequency.setValueAtTime(220, audioContext.currentTime);
+          oscillator.type = 'sine';
+          
+          // Volume extrêmement bas
+          gainNode.gain.setValueAtTime(0.01, audioContext.currentTime);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 5);
+          
+          oscillator.start(audioContext.currentTime);
+          oscillator.stop(audioContext.currentTime + 5);
+        };
+        
+        // Jouer toutes les 8 secondes
+        setInterval(playAmbientNote, 8000);
+        
+      } catch (e) {
+        // Audio non supporté ou bloqué
+      }
+    }
+    
+    // Message spécial au chargement
+    window.onload = function() {
+      setTimeout(() => {
+        console.log("%c✨ Cette page est dédiée à Ruth, la lumière de ma vie ✨", 
+          "background: linear-gradient(90deg, #ff69b4, #ff1493); color: white; font-size: 16px; padding: 10px; border-radius: 5px;");
+      }, 1000);
+    };
+  </script>
+</body>
+</html>
